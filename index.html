@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>My Own Template</title>
+</head>
+<body>
+    <header>
+       <nav>
+        <div class="nav__container">
+            <ul class="nav-texts">
+                <li><h2 class="nav__text">HI EVERYONE!</h2></li>
+                <li><button id="form-btn" class="nav__button">Let's Try</button></li>
+            </ul>
+        </div>
+       </nav>
+
+       <div class="header__content__container">
+        <div class="text__container">
+            <h1 class="title">Welcome</h1>
+            <p class="description__text">
+                That's a test website for practicing database GET & POST methods and eth.
+            </p>
+            <a href="#information" class="scrollBelow__button">scroll below</a>
+        </div>
+        <img src="./img/laptop.png" alt="Laptop Image" class="laptop__img">
+       </div>
+    </header>
+
+    <div class="main-content" id="information">
+        <div class="main-content__container">
+            <img src="./img/keyboard.png" alt="Keyboard Image" class="keyboard__img">
+            <div class="text__container">
+                <h2 class="title">Just a simple website</h2>
+                <p class="description__text">
+                    With a simple design for everyone who wants a quick layout. Any icons or tiny details just a big images and texts, nothings else.
+                </p>
+                <button id="form-btn" class="main-content__button">Let's Try</button>
+            </div>
+           </div>
+    </div>
+
+    <footer>
+        <nav>
+            <div class="nav__container">
+                <ul class="nav-texts">
+                    <li><span class="nav__text-1">Any design copyrights : )</span></li>
+                    <li><span class="nav__text-2">BYE BYE!</span></li>
+                </ul>
+            </div>
+        </nav>
+    </footer>
+
+    <div class="modal modal-hidden" >
+        <div class="form-modal">
+            <div class="form__container">
+                <img src="./img/close-icon.svg" alt="Close Icon" class="close-icon">
+                <span class="form-text">contact us</span>
+                <form>
+                    <input type="text" name="username" id="username" placeholder="Your name">
+                    <input type="tel" name="tel" id="tel" placeholder="Phone number">
+                    <button class="form__btn" type="submit">let's go!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/form-modal.js"></script>
+    <!-- <script src="/js/GET-XMLrequest.js"></script> -->
+    <!-- <script src="./js/POST-XMLrequest.js"></script> -->
+</body>
+</html>
