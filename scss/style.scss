@@ -170,6 +170,7 @@ footer .nav-texts {
     color: #fff;
     font-weight: 700;
     font-size: 30px;
+    text-align: right;
 }
 
 .modal {
@@ -280,9 +281,9 @@ form{
     text-transform: capitalize;
     margin: 0 auto;
 }
-// .modal-hidden{
-//     display: none;
-// }
+.modal-hidden{
+    display: none;
+}
 
 //ANIMATION
 @keyframes loading {
@@ -341,8 +342,8 @@ form{
     }
     .scrollBelow__button {
         position: relative;
-        top: 400px;
         text-align: center;
+        top: 450px;
     }
 
     .main-content {
@@ -404,7 +405,7 @@ form{
     }
     .scrollBelow__button {
         position: relative;
-        top: 400px;
+        top: 475px;
     }
 
     .main-content__container {
@@ -489,7 +490,7 @@ form{
     }
     .scrollBelow__button {
         position: relative;
-        top: 350px;
+        top: 400px;
     }
 
     .main-content .title {
@@ -512,7 +513,9 @@ form{
         height: 65px;
         font-size: 22.5px;
     }
-
+    .nav__text-2{
+        font-size: 18px;
+    }
     .responce-text{
         font-size: 25px;
     }
@@ -533,6 +536,16 @@ form{
         max-width: 275px;
         height: 70px;
         font-size: 20px;
+    }
+}
+@media (max-height:"725px"){
+    .laptop__img{
+        top: 0;
+    }
+}
+@media (max-height:"650px"){
+    .laptop__img{
+        top: 50px;
     }
 }
 @media (prefers-reduced-motion: no-preference){

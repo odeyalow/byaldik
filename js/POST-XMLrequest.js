@@ -24,47 +24,64 @@ document.addEventListener('DOMContentLoaded', () => {
                 formContainer.append(ResponceText);
             }
         };
+
   
-    forms.forEach(item => {
-        postData(item);
+    forms.forEach(form => {
+        postData(form);
     })
-    
-    function resetRequest(){
-        
-    }
 
     function postData(form){
         form.addEventListener('submit', event => {
             event.preventDefault();
-            
-            const request = new XMLHttpRequest();
 
-            request.open('POST', 'serverhp');
+            for (let i = 0; i < form.length - 1; i++) {
+                if ( form[0].value != '' && form[1].value != '' ) {
+                    form[i].style.borderColor = 'rgb(23, 1, 47)';
 
-            const formData = new FormData(form);
-            
-            request.send(formData);
+                    const formData = new FormData(form);
 
-            allElements.forEach((element) => {
-                element.style.display = 'none';
-            });
-            requestResponces.loading();
-
-            request.addEventListener('load', () => {
-                if ( request.status === 200 ) {
-                    requestResponces.successResponse();
-                } else {
-                    requestResponces.failureResponse();
-                }
-                setTimeout(function(){
-                    allElements.forEach(element => {
-                        element.style.display = 'block';
-                        allElements[2].style.display = 'flex';
-                        allElements[2].reset();
+                    allElements.forEach((element) => {
+                        element.style.display = 'none';
                     });
-                    ResponceText.remove();
-                }, 3000);
-            })
+
+                    requestResponces.loading();
+
+                    if ( i ===  1 ) {
+                        fetch('server.php', {
+                            method:'POST',
+                            // headers: {
+                            //     'Content-type':'application/json'
+                            // },
+                            body:formData
+                        }).then(response => response.text())
+                        .then(response => {
+                            console.log(response);
+                            requestResponces.successResponse();
+                        }).catch(() => {
+                            requestResponces.failureResponse();
+                        }).finally(() => {
+                            setTimeout(function(){
+                                allElements.forEach(element => {
+                                    element.style.display = 'block';
+                                    allElements[2].style.display = 'flex';
+                                    allElements[2].reset();
+                                });
+                                ResponceText.remove();
+                            }, 3000);
+                        })
+                    }
+                } else if ( form[i].value == '' ) {
+                    form[i].style.boxShadow = '0 0 10px red';
+                    form[i].style.borderColor = 'red';
+                    form[i].classList.add('isNotFilled');
+                    setTimeout(() => {
+                        form[i].classList.remove('isNotFilled');
+                    }, 300);
+                } else {
+                    form[i].style.borderColor = 'rgb(23, 1, 47)';
+                    form[i].style.boxShadow = 'none';
+                }
+            }       
         })
     }
 })
