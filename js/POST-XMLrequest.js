@@ -65,6 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                     element.style.display = 'block';
                                     allElements[2].style.display = 'flex';
                                     allElements[2].reset();
+                                    form[i].style.boxShadow = 'none';
                                 });
                                 ResponceText.remove();
                             }, 3000);
