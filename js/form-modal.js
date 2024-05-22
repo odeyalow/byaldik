@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         inputs.forEach(input => {
             input.value = ''; 
             input.style.borderColor = 'rgb(23, 1, 47)';
+            input.style.boxShadow = 'none';
         })
     }
 
