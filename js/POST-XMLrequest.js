@@ -27,10 +27,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   
     forms.forEach(form => {
-        postData(form);
+        bindPostData(form);
     })
 
-    function postData(form){
+    const postData = async (url, data) => {
+        const res = await fetch(url, {
+            method:'POST',
+            headers: {
+                'Content-type':'application/json'
+            },
+            body:data
+        })
+        
+        return await res.json();
+    }
+
+
+    function bindPostData(form){
         form.addEventListener('submit', event => {
             event.preventDefault();
 
@@ -47,13 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     requestResponces.loading();
 
                     if ( i ===  1 ) {
-                        fetch('server.php', {
-                            method:'POST',
-                            // headers: {
-                            //     'Content-type':'application/json'
-                            // },
-                            body:formData
-                        }).then(response => response.text())
+                        postData('http://localhost:3000/requests', JSON.stringify(data))
+                        .then(response => response.text())
                         .then(response => {
                             console.log(response);
                             requestResponces.successResponse();
