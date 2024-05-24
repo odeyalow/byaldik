@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     requestResponces.loading();
 
                     if ( i ===  1 ) {
-                        postData('http://localhost:3000/requests', JSON.stringify(data))
+                        postData('http://localhost:3000/requests', formData)
                         .then(response => response.text())
                         .then(response => {
                             console.log(response);

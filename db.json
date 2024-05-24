@@ -1,28 +1,32 @@
 {
-    "menu": [
-      {
-        "imgsrc": "img/tabs/vegy.jpg",
-        "alt": "vegy",
-        "title": "Меню 'Фитнес'",
-        "description": "Innovative headphones that deliver superior sound quality with noise-cancellation technology. Perfect for music lovers and professionals needing high-fidelity audio.",
-        "cardClass": "card-1"
-      },
-      {
-        "imgsrc": "img/tabs/post.jpg",
-        "alt": "post",
-        "title": "Меню 'Постное'",
-        "description": "Sleek and ergonomic gamepad designed for ultimate comfort and control. Enhances your gaming experience with responsive buttons and a durable build.",
-        "cardClass": "card-2"
-      },
-      {
-        "imgsrc": "img/tabs/elite.jpg",
-        "alt": "elite",
-        "title": "Меню 'Премиум'",
-        "description": "High-performance GPU engineered for intensive gaming and graphic design. Provides exceptional rendering speeds and supports the latest graphics technologies.",
-        "cardClass": "card-3"
-      }
-    ],
-    "requests": [
-        
-    ]
-  }
+  "menu": [
+    {
+      "imgsrc": "img/tabs/vegy.jpg",
+      "alt": "vegy",
+      "title": "Меню 'Фитнес'",
+      "description": "Innovative headphones that deliver superior sound quality with noise-cancellation technology. Perfect for music lovers and professionals needing high-fidelity audio.",
+      "cardClass": "card-1",
+      "id": "c71e"
+    },
+    {
+      "imgsrc": "img/tabs/post.jpg",
+      "alt": "post",
+      "title": "Меню 'Постное'",
+      "description": "Sleek and ergonomic gamepad designed for ultimate comfort and control. Enhances your gaming experience with responsive buttons and a durable build.",
+      "cardClass": "card-2",
+      "id": "778e"
+    },
+    {
+      "imgsrc": "img/tabs/elite.jpg",
+      "alt": "elite",
+      "title": "Меню 'Премиум'",
+      "description": "High-performance GPU engineered for intensive gaming and graphic design. Provides exceptional rendering speeds and supports the latest graphics technologies.",
+      "cardClass": "card-3",
+      "id": "e91c"
+    }
+  ],
+  "requests": [
+    {
+    }
+  ]
+}
